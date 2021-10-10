@@ -1,0 +1,3344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.7.9 on win32)" generated="20211010 21:07:41.900" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="C:\Users\buidu\PycharmProjects\SH-Flasky-interview\Tests">
+<suite id="s1-s1" name="HomePage" source="C:\Users\buidu\PycharmProjects\SH-Flasky-interview\Tests\01__HomePage.robot">
+<kw name="Open My Browser" library="common_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211010 21:07:42.239" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<status status="PASS" starttime="20211010 21:07:42.239" endtime="20211010 21:07:44.214"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211010 21:07:44.214" endtime="20211010 21:07:44.340"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:07:45.352" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:07:44.340" endtime="20211010 21:07:45.352"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:42.239" endtime="20211010 21:07:45.352"/>
+</kw>
+<test id="s1-s1-t1" name="UITest">
+<kw name="FrontPage">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>index page - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211010 21:07:45.352" level="INFO">Page title is 'index page - Demo App'.</msg>
+<status status="PASS" starttime="20211010 21:07:45.352" endtime="20211010 21:07:45.352"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>../Output/Screenshots/01__HomePage_FrontPage.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211010 21:07:45.539" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01__HomePage_FrontPage.png"&gt;&lt;img src="Screenshots/01__HomePage_FrontPage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211010 21:07:45.352" endtime="20211010 21:07:45.539"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:45.352" endtime="20211010 21:07:45.539"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:07:46.539" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:07:45.539" endtime="20211010 21:07:46.539"/>
+</kw>
+<kw name="LoginPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:46.539" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:07:46.539" endtime="20211010 21:07:46.705"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//header//h1</arg>
+<arg>Log In</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211010 21:07:46.707" level="INFO">Verifying element '//header//h1' contains exact text 'Log In'.</msg>
+<status status="PASS" starttime="20211010 21:07:46.705" endtime="20211010 21:07:46.743"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${"username_txt"}</var>
+<arg>id:username</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20211010 21:07:46.743" level="INFO">${"username_txt"} = id:username</msg>
+<status status="PASS" starttime="20211010 21:07:46.743" endtime="20211010 21:07:46.743"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${"password_txt"}</var>
+<arg>id:password</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20211010 21:07:46.743" level="INFO">${"password_txt"} = id:password</msg>
+<status status="PASS" starttime="20211010 21:07:46.743" endtime="20211010 21:07:46.743"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${"username_txt"}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20211010 21:07:46.778" level="INFO">Element 'id:username' is displayed.</msg>
+<status status="PASS" starttime="20211010 21:07:46.743" endtime="20211010 21:07:46.778"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${"username_txt"}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20211010 21:07:46.778" endtime="20211010 21:07:46.809"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${"username_txt"}</arg>
+<arg>user1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:46.809" level="INFO">Typing text 'user1' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:07:46.809" endtime="20211010 21:07:46.925"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${"password_txt"}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20211010 21:07:46.968" level="INFO">Element 'id:password' is displayed.</msg>
+<status status="PASS" starttime="20211010 21:07:46.925" endtime="20211010 21:07:46.969"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${"password_txt"}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20211010 21:07:46.969" endtime="20211010 21:07:46.992"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${"password_txt"}</arg>
+<arg>123456789</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:46.993" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:07:46.992" endtime="20211010 21:07:47.099"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:07:48.105" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:07:47.099" endtime="20211010 21:07:48.105"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${"username_txt"}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20211010 21:07:48.105" endtime="20211010 21:07:48.139"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${"password_txt"}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20211010 21:07:48.140" endtime="20211010 21:07:48.175"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:07:49.180" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:07:48.175" endtime="20211010 21:07:49.180"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>../Output/Screenshots/01__HomePage_LoginPage.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211010 21:07:49.403" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01__HomePage_LoginPage.png"&gt;&lt;img src="Screenshots/01__HomePage_LoginPage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211010 21:07:49.181" endtime="20211010 21:07:49.403"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:46.539" endtime="20211010 21:07:49.404"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:07:50.408" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:07:49.407" endtime="20211010 21:07:50.408"/>
+</kw>
+<tag>front-page</tag>
+<tag>login-page</tag>
+<tag>ui-test</tag>
+<status status="PASS" starttime="20211010 21:07:45.352" endtime="20211010 21:07:50.408"/>
+</test>
+<kw name="Close Browsers" library="common_resources" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211010 21:07:50.408" endtime="20211010 21:07:52.697"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:50.408" endtime="20211010 21:07:52.697"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:41.969" endtime="20211010 21:07:52.697"/>
+</suite>
+<suite id="s1-s2" name="InvalidRegisterTests" source="C:\Users\buidu\PycharmProjects\SH-Flasky-interview\Tests\02__InvalidRegisterTests.robot">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open My Browser</arg>
+<arg>AND</arg>
+<arg>Open Register Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open My Browser" library="common_resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211010 21:07:52.744" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<status status="PASS" starttime="20211010 21:07:52.744" endtime="20211010 21:07:54.715"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211010 21:07:54.715" endtime="20211010 21:07:54.850"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:07:55.855" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:07:54.851" endtime="20211010 21:07:55.855"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:52.744" endtime="20211010 21:07:55.855"/>
+</kw>
+<kw name="Open Register Page" library="register_resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Register')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:55.855" level="INFO">Clicking link 'xpath://a[contains(text(),'Register')]'.</msg>
+<status status="PASS" starttime="20211010 21:07:55.855" endtime="20211010 21:07:56.048"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:55.855" endtime="20211010 21:07:56.049"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:52.744" endtime="20211010 21:07:56.049"/>
+</kw>
+<test id="s1-s2-t1" name="Empty Username">
+<kw name="Invalid Register">
+<arg>${EMPTY}</arg>
+<arg>123456789</arg>
+<arg>Alex</arg>
+<arg>Nguyen</arg>
+<arg>0461273560</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:56.054" level="INFO">Typing text '' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:07:56.053" endtime="20211010 21:07:56.155"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:56.053" endtime="20211010 21:07:56.155"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:56.155" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:07:56.155" endtime="20211010 21:07:56.289"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:56.155" endtime="20211010 21:07:56.289"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:56.292" level="INFO">Typing text 'Alex' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:07:56.291" endtime="20211010 21:07:56.384"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:56.384" level="INFO">Typing text 'Nguyen' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:07:56.384" endtime="20211010 21:07:56.491"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:56.492" level="INFO">Typing text '0461273560' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:07:56.492" endtime="20211010 21:07:56.626"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:56.290" endtime="20211010 21:07:56.627"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:56.628" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:07:56.628" endtime="20211010 21:07:56.717"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:56.627" endtime="20211010 21:07:56.718"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:07:56.725" level="INFO">Current location is 'http://127.0.0.1:5000/register'.</msg>
+<status status="PASS" starttime="20211010 21:07:56.718" endtime="20211010 21:07:56.725"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:56.051" endtime="20211010 21:07:56.725"/>
+</kw>
+<tag>invalid-register</tag>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20211010 21:07:56.049" endtime="20211010 21:07:56.726"/>
+</test>
+<test id="s1-s2-t2" name="Empty Password">
+<kw name="Invalid Register">
+<arg>user1</arg>
+<arg>${EMPTY}</arg>
+<arg>Jacob</arg>
+<arg>Gates</arg>
+<arg>0457440359</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:56.734" level="INFO">Typing text 'user1' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:07:56.734" endtime="20211010 21:07:56.795"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:56.733" endtime="20211010 21:07:56.795"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:56.795" level="INFO">Typing text '' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:07:56.795" endtime="20211010 21:07:56.857"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:56.795" endtime="20211010 21:07:56.857"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:56.857" level="INFO">Typing text 'Jacob' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:07:56.857" endtime="20211010 21:07:56.926"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:56.926" level="INFO">Typing text 'Gates' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:07:56.926" endtime="20211010 21:07:57.011"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:57.011" level="INFO">Typing text '0457440359' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.011" endtime="20211010 21:07:57.111"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:56.857" endtime="20211010 21:07:57.111"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:57.112" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.111" endtime="20211010 21:07:57.150"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:57.111" endtime="20211010 21:07:57.151"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:07:57.157" level="INFO">Current location is 'http://127.0.0.1:5000/register'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.151" endtime="20211010 21:07:57.157"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:56.731" endtime="20211010 21:07:57.158"/>
+</kw>
+<tag>invalid-register</tag>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20211010 21:07:56.728" endtime="20211010 21:07:57.158"/>
+</test>
+<test id="s1-s2-t3" name="Empty First Name">
+<kw name="Invalid Register">
+<arg>user2</arg>
+<arg>123456789</arg>
+<arg>${EMPTY}</arg>
+<arg>Tyler</arg>
+<arg>0466764890</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:57.162" level="INFO">Typing text 'user2' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.162" endtime="20211010 21:07:57.245"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:57.161" endtime="20211010 21:07:57.246"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:57.247" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.246" endtime="20211010 21:07:57.320"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:57.246" endtime="20211010 21:07:57.321"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:57.322" level="INFO">Typing text '' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.322" endtime="20211010 21:07:57.380"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:57.381" level="INFO">Typing text 'Tyler' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.381" endtime="20211010 21:07:57.452"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:57.452" level="INFO">Typing text '0466764890' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.452" endtime="20211010 21:07:57.530"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:57.321" endtime="20211010 21:07:57.531"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:57.531" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.531" endtime="20211010 21:07:57.570"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:57.531" endtime="20211010 21:07:57.570"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:07:57.575" level="INFO">Current location is 'http://127.0.0.1:5000/register'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.571" endtime="20211010 21:07:57.575"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:57.160" endtime="20211010 21:07:57.575"/>
+</kw>
+<tag>invalid-register</tag>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20211010 21:07:57.160" endtime="20211010 21:07:57.576"/>
+</test>
+<test id="s1-s2-t4" name="Empty Last Name">
+<kw name="Invalid Register">
+<arg>user3</arg>
+<arg>123456789</arg>
+<arg>Phil</arg>
+<arg>${EMPTY}</arg>
+<arg>0461214359</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:57.586" level="INFO">Typing text 'user3' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.585" endtime="20211010 21:07:57.674"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:57.582" endtime="20211010 21:07:57.674"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:57.675" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.675" endtime="20211010 21:07:57.762"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:57.674" endtime="20211010 21:07:57.762"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:57.764" level="INFO">Typing text 'Phil' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.763" endtime="20211010 21:07:57.824"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:57.825" level="INFO">Typing text '' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.825" endtime="20211010 21:07:57.884"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:57.885" level="INFO">Typing text '0461214359' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.884" endtime="20211010 21:07:57.958"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:57.762" endtime="20211010 21:07:57.958"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:57.959" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:07:57.959" endtime="20211010 21:07:58.010"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:57.958" endtime="20211010 21:07:58.010"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:07:58.015" level="INFO">Current location is 'http://127.0.0.1:5000/register'.</msg>
+<status status="PASS" starttime="20211010 21:07:58.011" endtime="20211010 21:07:58.016"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:57.578" endtime="20211010 21:07:58.016"/>
+</kw>
+<tag>invalid-register</tag>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20211010 21:07:57.577" endtime="20211010 21:07:58.016"/>
+</test>
+<test id="s1-s2-t5" name="Empty Phone Number">
+<kw name="Invalid Register">
+<arg>user4</arg>
+<arg>123456789</arg>
+<arg>John</arg>
+<arg>Lee</arg>
+<arg>${EMPTY}</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:58.026" level="INFO">Typing text 'user4' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:07:58.025" endtime="20211010 21:07:58.102"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:58.025" endtime="20211010 21:07:58.102"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:58.105" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:07:58.105" endtime="20211010 21:07:58.179"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:58.103" endtime="20211010 21:07:58.179"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:58.181" level="INFO">Typing text 'John' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:07:58.180" endtime="20211010 21:07:58.247"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:58.248" level="INFO">Typing text 'Lee' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:07:58.247" endtime="20211010 21:07:58.308"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:58.309" level="INFO">Typing text '' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:07:58.309" endtime="20211010 21:07:58.373"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:58.179" endtime="20211010 21:07:58.374"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:07:58.375" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:07:58.375" endtime="20211010 21:07:58.409"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:58.374" endtime="20211010 21:07:58.410"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${REGISTER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:07:58.414" level="INFO">Current location is 'http://127.0.0.1:5000/register'.</msg>
+<status status="PASS" starttime="20211010 21:07:58.410" endtime="20211010 21:07:58.415"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:58.022" endtime="20211010 21:07:58.415"/>
+</kw>
+<tag>invalid-register</tag>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20211010 21:07:58.020" endtime="20211010 21:07:58.416"/>
+</test>
+<kw name="Close Browsers" library="common_resources" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211010 21:07:58.419" endtime="20211010 21:08:00.626"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:58.418" endtime="20211010 21:08:00.626"/>
+</kw>
+<status status="PASS" starttime="20211010 21:07:52.697" endtime="20211010 21:08:00.626"/>
+</suite>
+<suite id="s1-s3" name="ValidRegisterTests" source="C:\Users\buidu\PycharmProjects\SH-Flasky-interview\Tests\03__ValidRegisterTests.robot">
+<kw name="Open My Browser" library="common_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211010 21:08:01.813" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<status status="PASS" starttime="20211010 21:08:01.813" endtime="20211010 21:08:03.681"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211010 21:08:03.682" endtime="20211010 21:08:03.828"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:04.830" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:08:03.828" endtime="20211010 21:08:04.830"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:01.813" endtime="20211010 21:08:04.830"/>
+</kw>
+<test id="s1-s3-t1" name="Users Registration should be successful with valid credentials">
+<kw name="Open Register Page" library="register_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Register')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:04.830" level="INFO">Clicking link 'xpath://a[contains(text(),'Register')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:04.830" endtime="20211010 21:08:05.027"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:04.830" endtime="20211010 21:08:05.028"/>
+</kw>
+<kw name="Valid Registration">
+<arg>user1</arg>
+<arg>123456789</arg>
+<arg>Alex</arg>
+<arg>Nguyen</arg>
+<arg>4631765890</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:05.032" level="INFO">Typing text 'user1' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:05.031" endtime="20211010 21:08:05.146"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:05.031" endtime="20211010 21:08:05.146"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:05.146" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:05.146" endtime="20211010 21:08:05.273"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:05.146" endtime="20211010 21:08:05.273"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:05.275" level="INFO">Typing text 'Alex' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:08:05.274" endtime="20211010 21:08:05.362"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:05.363" level="INFO">Typing text 'Nguyen' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:08:05.362" endtime="20211010 21:08:05.452"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:05.453" level="INFO">Typing text '4631765890' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:08:05.452" endtime="20211010 21:08:05.564"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:05.273" endtime="20211010 21:08:05.564"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:05.566" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:08:05.565" endtime="20211010 21:08:05.727"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:05.565" endtime="20211010 21:08:05.727"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:06.730" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:08:05.728" endtime="20211010 21:08:06.731"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${currentlocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20211010 21:08:06.731" level="INFO">${currentlocation} = http://127.0.0.1:5000/login</msg>
+<status status="PASS" starttime="20211010 21:08:06.731" endtime="20211010 21:08:06.731"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${currentlocation}&quot; == &quot;http://${SERVER}/register&quot;">
+<kw name="Username already exists" library="register_resources">
+<arg>${username}</arg>
+<status status="NOT RUN" starttime="20211010 21:08:06.731" endtime="20211010 21:08:06.731"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:06.731" endtime="20211010 21:08:06.731"/>
+</branch>
+<branch type="ELSE">
+<kw name="Login Page Should Be Visible" library="register_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:06.746" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:06.731" endtime="20211010 21:08:06.746"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Log In - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211010 21:08:06.746" level="INFO">Page title is 'Log In - Demo App'.</msg>
+<status status="PASS" starttime="20211010 21:08:06.746" endtime="20211010 21:08:06.746"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:06.731" endtime="20211010 21:08:06.746"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:06.731" endtime="20211010 21:08:06.746"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:06.731" endtime="20211010 21:08:06.746"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:05.029" endtime="20211010 21:08:06.746"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-register</tag>
+<status status="PASS" starttime="20211010 21:08:04.830" endtime="20211010 21:08:06.746"/>
+</test>
+<test id="s1-s3-t2" name="Users Registration should be successful with valid credentials">
+<kw name="Open Register Page" library="register_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Register')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:06.762" level="INFO">Clicking link 'xpath://a[contains(text(),'Register')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:06.762" endtime="20211010 21:08:06.850"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:06.746" endtime="20211010 21:08:06.850"/>
+</kw>
+<kw name="Valid Registration">
+<arg>user2</arg>
+<arg>123456789</arg>
+<arg>Ben</arg>
+<arg>Gates</arg>
+<arg>4631765890</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:06.855" level="INFO">Typing text 'user2' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:06.854" endtime="20211010 21:08:06.951"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:06.852" endtime="20211010 21:08:06.951"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:06.952" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:06.952" endtime="20211010 21:08:07.049"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:06.952" endtime="20211010 21:08:07.049"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:07.050" level="INFO">Typing text 'Ben' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:08:07.050" endtime="20211010 21:08:07.132"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:07.133" level="INFO">Typing text 'Gates' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:08:07.133" endtime="20211010 21:08:07.219"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:07.220" level="INFO">Typing text '4631765890' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:08:07.219" endtime="20211010 21:08:07.321"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:07.049" endtime="20211010 21:08:07.321"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:07.323" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:08:07.322" endtime="20211010 21:08:07.483"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:07.321" endtime="20211010 21:08:07.484"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:08.502" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:08:07.485" endtime="20211010 21:08:08.502"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${currentlocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20211010 21:08:08.517" level="INFO">${currentlocation} = http://127.0.0.1:5000/login</msg>
+<status status="PASS" starttime="20211010 21:08:08.502" endtime="20211010 21:08:08.517"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${currentlocation}&quot; == &quot;http://${SERVER}/register&quot;">
+<kw name="Username already exists" library="register_resources">
+<arg>${username}</arg>
+<status status="NOT RUN" starttime="20211010 21:08:08.517" endtime="20211010 21:08:08.517"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:08.517" endtime="20211010 21:08:08.517"/>
+</branch>
+<branch type="ELSE">
+<kw name="Login Page Should Be Visible" library="register_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:08.527" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:08.517" endtime="20211010 21:08:08.527"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Log In - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211010 21:08:08.542" level="INFO">Page title is 'Log In - Demo App'.</msg>
+<status status="PASS" starttime="20211010 21:08:08.527" endtime="20211010 21:08:08.542"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:08.517" endtime="20211010 21:08:08.542"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:08.517" endtime="20211010 21:08:08.542"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:08.517" endtime="20211010 21:08:08.542"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:06.851" endtime="20211010 21:08:08.542"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-register</tag>
+<status status="PASS" starttime="20211010 21:08:06.746" endtime="20211010 21:08:08.542"/>
+</test>
+<test id="s1-s3-t3" name="Users Registration should be successful with valid credentials">
+<kw name="Open Register Page" library="register_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Register')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:08.574" level="INFO">Clicking link 'xpath://a[contains(text(),'Register')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:08.574" endtime="20211010 21:08:08.715"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:08.574" endtime="20211010 21:08:08.715"/>
+</kw>
+<kw name="Valid Registration">
+<arg>user3</arg>
+<arg>123456789</arg>
+<arg>Charlie</arg>
+<arg>Hanks</arg>
+<arg>4631765890</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:08.719" level="INFO">Typing text 'user3' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:08.718" endtime="20211010 21:08:08.843"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:08.717" endtime="20211010 21:08:08.843"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:08.844" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:08.844" endtime="20211010 21:08:08.948"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:08.843" endtime="20211010 21:08:08.948"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:08.950" level="INFO">Typing text 'Charlie' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:08:08.949" endtime="20211010 21:08:09.043"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:09.044" level="INFO">Typing text 'Hanks' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:08:09.043" endtime="20211010 21:08:09.130"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:09.130" level="INFO">Typing text '4631765890' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:08:09.130" endtime="20211010 21:08:09.224"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:08.949" endtime="20211010 21:08:09.224"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:09.225" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:08:09.225" endtime="20211010 21:08:09.368"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:09.224" endtime="20211010 21:08:09.368"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:10.393" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:08:09.369" endtime="20211010 21:08:10.393"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${currentlocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20211010 21:08:10.393" level="INFO">${currentlocation} = http://127.0.0.1:5000/login</msg>
+<status status="PASS" starttime="20211010 21:08:10.393" endtime="20211010 21:08:10.393"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${currentlocation}&quot; == &quot;http://${SERVER}/register&quot;">
+<kw name="Username already exists" library="register_resources">
+<arg>${username}</arg>
+<status status="NOT RUN" starttime="20211010 21:08:10.393" endtime="20211010 21:08:10.393"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:10.393" endtime="20211010 21:08:10.393"/>
+</branch>
+<branch type="ELSE">
+<kw name="Login Page Should Be Visible" library="register_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:10.408" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:10.393" endtime="20211010 21:08:10.408"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Log In - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211010 21:08:10.408" level="INFO">Page title is 'Log In - Demo App'.</msg>
+<status status="PASS" starttime="20211010 21:08:10.408" endtime="20211010 21:08:10.408"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:10.393" endtime="20211010 21:08:10.408"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:10.393" endtime="20211010 21:08:10.408"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:10.393" endtime="20211010 21:08:10.408"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:08.716" endtime="20211010 21:08:10.408"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-register</tag>
+<status status="PASS" starttime="20211010 21:08:08.558" endtime="20211010 21:08:10.423"/>
+</test>
+<test id="s1-s3-t4" name="Users Registration should be successful with valid credentials">
+<kw name="Open Register Page" library="register_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Register')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:10.434" level="INFO">Clicking link 'xpath://a[contains(text(),'Register')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:10.434" endtime="20211010 21:08:10.535"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:10.434" endtime="20211010 21:08:10.535"/>
+</kw>
+<kw name="Valid Registration">
+<arg>user4</arg>
+<arg>123456789</arg>
+<arg>Dean</arg>
+<arg>Musks</arg>
+<arg>4631765890</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:10.537" level="INFO">Typing text 'user4' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:10.537" endtime="20211010 21:08:10.637"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:10.537" endtime="20211010 21:08:10.637"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:10.639" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:10.638" endtime="20211010 21:08:10.742"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:10.637" endtime="20211010 21:08:10.743"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:10.745" level="INFO">Typing text 'Dean' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:08:10.745" endtime="20211010 21:08:10.840"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:10.841" level="INFO">Typing text 'Musks' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:08:10.841" endtime="20211010 21:08:10.927"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:10.928" level="INFO">Typing text '4631765890' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:08:10.927" endtime="20211010 21:08:11.021"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:10.743" endtime="20211010 21:08:11.021"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:11.022" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:08:11.022" endtime="20211010 21:08:11.203"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:11.021" endtime="20211010 21:08:11.203"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:12.204" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:08:11.203" endtime="20211010 21:08:12.204"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${currentlocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20211010 21:08:12.219" level="INFO">${currentlocation} = http://127.0.0.1:5000/login</msg>
+<status status="PASS" starttime="20211010 21:08:12.204" endtime="20211010 21:08:12.219"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${currentlocation}&quot; == &quot;http://${SERVER}/register&quot;">
+<kw name="Username already exists" library="register_resources">
+<arg>${username}</arg>
+<status status="NOT RUN" starttime="20211010 21:08:12.219" endtime="20211010 21:08:12.219"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:12.219" endtime="20211010 21:08:12.219"/>
+</branch>
+<branch type="ELSE">
+<kw name="Login Page Should Be Visible" library="register_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:12.241" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:12.219" endtime="20211010 21:08:12.241"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Log In - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211010 21:08:12.241" level="INFO">Page title is 'Log In - Demo App'.</msg>
+<status status="PASS" starttime="20211010 21:08:12.241" endtime="20211010 21:08:12.241"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:12.219" endtime="20211010 21:08:12.241"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:12.219" endtime="20211010 21:08:12.241"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:12.219" endtime="20211010 21:08:12.241"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:10.536" endtime="20211010 21:08:12.241"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-register</tag>
+<status status="PASS" starttime="20211010 21:08:10.423" endtime="20211010 21:08:12.241"/>
+</test>
+<test id="s1-s3-t5" name="Users Registration should be successful with valid credentials">
+<kw name="Open Register Page" library="register_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Register')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:12.257" level="INFO">Clicking link 'xpath://a[contains(text(),'Register')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:12.257" endtime="20211010 21:08:12.357"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:12.257" endtime="20211010 21:08:12.357"/>
+</kw>
+<kw name="Valid Registration">
+<arg>user5</arg>
+<arg>123456789</arg>
+<arg>Ethan</arg>
+<arg>Downey</arg>
+<arg>4631765890</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:12.359" level="INFO">Typing text 'user5' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:12.359" endtime="20211010 21:08:12.457"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:12.358" endtime="20211010 21:08:12.458"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:12.460" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:12.459" endtime="20211010 21:08:12.552"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:12.458" endtime="20211010 21:08:12.553"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:12.554" level="INFO">Typing text 'Ethan' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:08:12.553" endtime="20211010 21:08:12.637"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:12.637" level="INFO">Typing text 'Downey' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:08:12.637" endtime="20211010 21:08:12.753"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:12.753" level="INFO">Typing text '4631765890' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:08:12.753" endtime="20211010 21:08:12.856"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:12.553" endtime="20211010 21:08:12.856"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:12.858" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:08:12.857" endtime="20211010 21:08:13.025"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:12.856" endtime="20211010 21:08:13.025"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:14.042" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:08:13.026" endtime="20211010 21:08:14.042"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${currentlocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20211010 21:08:14.048" level="INFO">${currentlocation} = http://127.0.0.1:5000/login</msg>
+<status status="PASS" starttime="20211010 21:08:14.042" endtime="20211010 21:08:14.048"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${currentlocation}&quot; == &quot;http://${SERVER}/register&quot;">
+<kw name="Username already exists" library="register_resources">
+<arg>${username}</arg>
+<status status="NOT RUN" starttime="20211010 21:08:14.048" endtime="20211010 21:08:14.048"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:14.048" endtime="20211010 21:08:14.048"/>
+</branch>
+<branch type="ELSE">
+<kw name="Login Page Should Be Visible" library="register_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:14.063" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:14.048" endtime="20211010 21:08:14.063"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Log In - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211010 21:08:14.079" level="INFO">Page title is 'Log In - Demo App'.</msg>
+<status status="PASS" starttime="20211010 21:08:14.063" endtime="20211010 21:08:14.079"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:14.048" endtime="20211010 21:08:14.079"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:14.048" endtime="20211010 21:08:14.079"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:14.048" endtime="20211010 21:08:14.079"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:12.358" endtime="20211010 21:08:14.079"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-register</tag>
+<status status="PASS" starttime="20211010 21:08:12.241" endtime="20211010 21:08:14.079"/>
+</test>
+<test id="s1-s3-t6" name="Users Registration should be successful with valid credentials">
+<kw name="Open Register Page" library="register_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Register')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:14.094" level="INFO">Clicking link 'xpath://a[contains(text(),'Register')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:14.094" endtime="20211010 21:08:14.233"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:14.094" endtime="20211010 21:08:14.233"/>
+</kw>
+<kw name="Valid Registration">
+<arg>user6</arg>
+<arg>123456789</arg>
+<arg>Gwen</arg>
+<arg>Dion</arg>
+<arg>4631765890</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:14.236" level="INFO">Typing text 'user6' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:14.236" endtime="20211010 21:08:14.338"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:14.235" endtime="20211010 21:08:14.339"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:14.340" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:14.340" endtime="20211010 21:08:14.431"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:14.339" endtime="20211010 21:08:14.432"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:14.433" level="INFO">Typing text 'Gwen' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:08:14.432" endtime="20211010 21:08:14.535"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:14.536" level="INFO">Typing text 'Dion' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:08:14.535" endtime="20211010 21:08:14.626"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:14.627" level="INFO">Typing text '4631765890' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:08:14.627" endtime="20211010 21:08:14.739"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:14.432" endtime="20211010 21:08:14.739"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:14.741" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:08:14.740" endtime="20211010 21:08:14.896"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:14.739" endtime="20211010 21:08:14.896"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:15.914" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:08:14.897" endtime="20211010 21:08:15.914"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${currentlocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20211010 21:08:15.914" level="INFO">${currentlocation} = http://127.0.0.1:5000/login</msg>
+<status status="PASS" starttime="20211010 21:08:15.914" endtime="20211010 21:08:15.930"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${currentlocation}&quot; == &quot;http://${SERVER}/register&quot;">
+<kw name="Username already exists" library="register_resources">
+<arg>${username}</arg>
+<status status="NOT RUN" starttime="20211010 21:08:15.930" endtime="20211010 21:08:15.930"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:15.930" endtime="20211010 21:08:15.930"/>
+</branch>
+<branch type="ELSE">
+<kw name="Login Page Should Be Visible" library="register_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:15.945" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:15.930" endtime="20211010 21:08:15.945"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Log In - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211010 21:08:15.955" level="INFO">Page title is 'Log In - Demo App'.</msg>
+<status status="PASS" starttime="20211010 21:08:15.945" endtime="20211010 21:08:15.955"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:15.930" endtime="20211010 21:08:15.955"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:15.930" endtime="20211010 21:08:15.955"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:15.930" endtime="20211010 21:08:15.955"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:14.234" endtime="20211010 21:08:15.955"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-register</tag>
+<status status="PASS" starttime="20211010 21:08:14.094" endtime="20211010 21:08:15.955"/>
+</test>
+<test id="s1-s3-t7" name="Users Registration should be successful with valid credentials">
+<kw name="Open Register Page" library="register_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Register')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:15.971" level="INFO">Clicking link 'xpath://a[contains(text(),'Register')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:15.971" endtime="20211010 21:08:16.084"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:15.971" endtime="20211010 21:08:16.085"/>
+</kw>
+<kw name="Valid Registration">
+<arg>user7</arg>
+<arg>123456789</arg>
+<arg>Hugh</arg>
+<arg>Grant</arg>
+<arg>4631765890</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:16.088" level="INFO">Typing text 'user7' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:16.088" endtime="20211010 21:08:16.200"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:16.086" endtime="20211010 21:08:16.200"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:16.201" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:16.201" endtime="20211010 21:08:16.304"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:16.200" endtime="20211010 21:08:16.304"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:16.305" level="INFO">Typing text 'Hugh' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:08:16.305" endtime="20211010 21:08:16.405"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:16.405" level="INFO">Typing text 'Grant' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:08:16.405" endtime="20211010 21:08:16.504"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:16.504" level="INFO">Typing text '4631765890' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:08:16.504" endtime="20211010 21:08:16.608"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:16.304" endtime="20211010 21:08:16.608"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:16.610" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:08:16.610" endtime="20211010 21:08:16.788"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:16.609" endtime="20211010 21:08:16.788"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:17.794" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:08:16.789" endtime="20211010 21:08:17.794"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${currentlocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20211010 21:08:17.809" level="INFO">${currentlocation} = http://127.0.0.1:5000/login</msg>
+<status status="PASS" starttime="20211010 21:08:17.794" endtime="20211010 21:08:17.809"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${currentlocation}&quot; == &quot;http://${SERVER}/register&quot;">
+<kw name="Username already exists" library="register_resources">
+<arg>${username}</arg>
+<status status="NOT RUN" starttime="20211010 21:08:17.809" endtime="20211010 21:08:17.809"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:17.809" endtime="20211010 21:08:17.809"/>
+</branch>
+<branch type="ELSE">
+<kw name="Login Page Should Be Visible" library="register_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:17.809" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:17.809" endtime="20211010 21:08:17.809"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Log In - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211010 21:08:17.825" level="INFO">Page title is 'Log In - Demo App'.</msg>
+<status status="PASS" starttime="20211010 21:08:17.809" endtime="20211010 21:08:17.825"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:17.809" endtime="20211010 21:08:17.825"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:17.809" endtime="20211010 21:08:17.825"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:17.809" endtime="20211010 21:08:17.825"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:16.086" endtime="20211010 21:08:17.825"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-register</tag>
+<status status="PASS" starttime="20211010 21:08:15.971" endtime="20211010 21:08:17.825"/>
+</test>
+<test id="s1-s3-t8" name="Users Registration should be successful with valid credentials">
+<kw name="Open Register Page" library="register_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Register')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:17.841" level="INFO">Clicking link 'xpath://a[contains(text(),'Register')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:17.841" endtime="20211010 21:08:17.929"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:17.841" endtime="20211010 21:08:17.929"/>
+</kw>
+<kw name="Valid Registration">
+<arg>user8</arg>
+<arg>123456789</arg>
+<arg>Ian</arg>
+<arg>White</arg>
+<arg>4631765890</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:17.932" level="INFO">Typing text 'user8' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:17.932" endtime="20211010 21:08:18.035"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:17.931" endtime="20211010 21:08:18.035"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:18.036" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:18.036" endtime="20211010 21:08:18.125"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:18.036" endtime="20211010 21:08:18.125"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:18.127" level="INFO">Typing text 'Ian' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:08:18.126" endtime="20211010 21:08:18.214"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:18.215" level="INFO">Typing text 'White' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:08:18.214" endtime="20211010 21:08:18.302"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:18.303" level="INFO">Typing text '4631765890' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:08:18.302" endtime="20211010 21:08:18.396"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:18.126" endtime="20211010 21:08:18.396"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:18.398" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:08:18.397" endtime="20211010 21:08:18.554"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:18.396" endtime="20211010 21:08:18.554"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:19.562" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:08:18.554" endtime="20211010 21:08:19.563"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${currentlocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20211010 21:08:19.568" level="INFO">${currentlocation} = http://127.0.0.1:5000/login</msg>
+<status status="PASS" starttime="20211010 21:08:19.564" endtime="20211010 21:08:19.568"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${currentlocation}&quot; == &quot;http://${SERVER}/register&quot;">
+<kw name="Username already exists" library="register_resources">
+<arg>${username}</arg>
+<status status="NOT RUN" starttime="20211010 21:08:19.568" endtime="20211010 21:08:19.568"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:19.568" endtime="20211010 21:08:19.568"/>
+</branch>
+<branch type="ELSE">
+<kw name="Login Page Should Be Visible" library="register_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:19.584" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:19.568" endtime="20211010 21:08:19.584"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Log In - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211010 21:08:19.599" level="INFO">Page title is 'Log In - Demo App'.</msg>
+<status status="PASS" starttime="20211010 21:08:19.584" endtime="20211010 21:08:19.599"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:19.568" endtime="20211010 21:08:19.599"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:19.568" endtime="20211010 21:08:19.599"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:19.568" endtime="20211010 21:08:19.599"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:17.930" endtime="20211010 21:08:19.599"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-register</tag>
+<status status="PASS" starttime="20211010 21:08:17.825" endtime="20211010 21:08:19.599"/>
+</test>
+<test id="s1-s3-t9" name="Users Registration should be successful with valid credentials">
+<kw name="Open Register Page" library="register_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Register')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:19.615" level="INFO">Clicking link 'xpath://a[contains(text(),'Register')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:19.615" endtime="20211010 21:08:19.722"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:19.615" endtime="20211010 21:08:19.722"/>
+</kw>
+<kw name="Valid Registration">
+<arg>user9</arg>
+<arg>123456789</arg>
+<arg>Joe</arg>
+<arg>Hart</arg>
+<arg>4631765890</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:19.724" level="INFO">Typing text 'user9' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:19.724" endtime="20211010 21:08:19.825"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:19.724" endtime="20211010 21:08:19.825"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:19.827" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:19.827" endtime="20211010 21:08:19.923"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:19.826" endtime="20211010 21:08:19.923"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:19.925" level="INFO">Typing text 'Joe' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:08:19.925" endtime="20211010 21:08:20.011"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:20.012" level="INFO">Typing text 'Hart' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:08:20.012" endtime="20211010 21:08:20.120"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:20.121" level="INFO">Typing text '4631765890' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:08:20.120" endtime="20211010 21:08:20.215"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:19.923" endtime="20211010 21:08:20.216"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:20.217" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:08:20.216" endtime="20211010 21:08:20.355"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:20.216" endtime="20211010 21:08:20.355"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:21.375" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:08:20.356" endtime="20211010 21:08:21.375"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${currentlocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20211010 21:08:21.390" level="INFO">${currentlocation} = http://127.0.0.1:5000/login</msg>
+<status status="PASS" starttime="20211010 21:08:21.375" endtime="20211010 21:08:21.390"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${currentlocation}&quot; == &quot;http://${SERVER}/register&quot;">
+<kw name="Username already exists" library="register_resources">
+<arg>${username}</arg>
+<status status="NOT RUN" starttime="20211010 21:08:21.390" endtime="20211010 21:08:21.390"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:21.390" endtime="20211010 21:08:21.390"/>
+</branch>
+<branch type="ELSE">
+<kw name="Login Page Should Be Visible" library="register_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:21.406" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:21.390" endtime="20211010 21:08:21.406"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Log In - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211010 21:08:21.421" level="INFO">Page title is 'Log In - Demo App'.</msg>
+<status status="PASS" starttime="20211010 21:08:21.406" endtime="20211010 21:08:21.421"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:21.390" endtime="20211010 21:08:21.421"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:21.390" endtime="20211010 21:08:21.421"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:21.390" endtime="20211010 21:08:21.421"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:19.723" endtime="20211010 21:08:21.421"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-register</tag>
+<status status="PASS" starttime="20211010 21:08:19.615" endtime="20211010 21:08:21.421"/>
+</test>
+<test id="s1-s3-t10" name="Users Registration should be successful with valid credentials">
+<kw name="Open Register Page" library="register_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Register')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:21.437" level="INFO">Clicking link 'xpath://a[contains(text(),'Register')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:21.437" endtime="20211010 21:08:21.584"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:21.437" endtime="20211010 21:08:21.584"/>
+</kw>
+<kw name="Valid Registration">
+<arg>user10</arg>
+<arg>123456789</arg>
+<arg>Kat</arg>
+<arg>Lee</arg>
+<arg>4631765890</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:21.590" level="INFO">Typing text 'user10' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:21.589" endtime="20211010 21:08:21.695"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:21.588" endtime="20211010 21:08:21.695"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:21.696" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:21.696" endtime="20211010 21:08:21.776"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:21.696" endtime="20211010 21:08:21.776"/>
+</kw>
+<kw name="Input Personal Information" library="common_resources">
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:21.791" level="INFO">Typing text 'Kat' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20211010 21:08:21.790" endtime="20211010 21:08:21.872"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:21.873" level="INFO">Typing text 'Lee' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20211010 21:08:21.872" endtime="20211010 21:08:21.964"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:21.965" level="INFO">Typing text '4631765890' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20211010 21:08:21.964" endtime="20211010 21:08:22.062"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:21.776" endtime="20211010 21:08:22.063"/>
+</kw>
+<kw name="Click Register Button" library="register_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:22.064" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[6]'.</msg>
+<status status="PASS" starttime="20211010 21:08:22.064" endtime="20211010 21:08:22.220"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:22.063" endtime="20211010 21:08:22.221"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:23.231" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:08:22.221" endtime="20211010 21:08:23.232"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${currentlocation}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20211010 21:08:23.234" level="INFO">${currentlocation} = http://127.0.0.1:5000/login</msg>
+<status status="PASS" starttime="20211010 21:08:23.232" endtime="20211010 21:08:23.234"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${currentlocation}&quot; == &quot;http://${SERVER}/register&quot;">
+<kw name="Username already exists" library="register_resources">
+<arg>${username}</arg>
+<status status="NOT RUN" starttime="20211010 21:08:23.234" endtime="20211010 21:08:23.234"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:23.234" endtime="20211010 21:08:23.234"/>
+</branch>
+<branch type="ELSE">
+<kw name="Login Page Should Be Visible" library="register_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:23.250" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:23.250" endtime="20211010 21:08:23.250"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Log In - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211010 21:08:23.265" level="INFO">Page title is 'Log In - Demo App'.</msg>
+<status status="PASS" starttime="20211010 21:08:23.250" endtime="20211010 21:08:23.265"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:23.234" endtime="20211010 21:08:23.265"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:23.234" endtime="20211010 21:08:23.265"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:23.234" endtime="20211010 21:08:23.265"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:21.587" endtime="20211010 21:08:23.265"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-register</tag>
+<status status="PASS" starttime="20211010 21:08:21.421" endtime="20211010 21:08:23.265"/>
+</test>
+<kw name="Close Browsers" library="common_resources" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211010 21:08:23.281" endtime="20211010 21:08:25.495"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:23.265" endtime="20211010 21:08:25.495"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:00.626" endtime="20211010 21:08:25.495"/>
+</suite>
+<suite id="s1-s4" name="InvalidLoginTests" source="C:\Users\buidu\PycharmProjects\SH-Flasky-interview\Tests\04__InvalidLoginTests.robot">
+<kw name="Open My Browser" library="common_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211010 21:08:25.541" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<status status="PASS" starttime="20211010 21:08:25.541" endtime="20211010 21:08:27.397"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211010 21:08:27.398" endtime="20211010 21:08:27.531"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:28.535" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:08:27.531" endtime="20211010 21:08:28.535"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:25.541" endtime="20211010 21:08:28.535"/>
+</kw>
+<test id="s1-s4-t1" name="Right Username Wrong Password">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:28.541" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:28.541" endtime="20211010 21:08:28.729"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:28.541" endtime="20211010 21:08:28.729"/>
+</kw>
+<kw name="Invalid Login">
+<arg>user1</arg>
+<arg>xyz</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:28.735" level="INFO">Typing text 'user1' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:28.734" endtime="20211010 21:08:28.842"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:28.733" endtime="20211010 21:08:28.842"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:28.842" level="INFO">Typing text 'xyz' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:28.842" endtime="20211010 21:08:28.967"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:28.842" endtime="20211010 21:08:28.968"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:28.968" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:28.968" endtime="20211010 21:08:29.117"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:28.968" endtime="20211010 21:08:29.117"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:31.128" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211010 21:08:29.117" endtime="20211010 21:08:31.128"/>
+</kw>
+<if>
+<branch type="IF" condition="(&quot;${username}&quot; != &quot;${EMPTY}&quot;) and (&quot;${password}&quot; != &quot;${EMPTY}&quot;)">
+<kw name="Error Page Should Be Visible" library="login_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:31.144" level="INFO">Current location is 'http://127.0.0.1:5000/error'.</msg>
+<status status="PASS" starttime="20211010 21:08:31.128" endtime="20211010 21:08:31.144"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Login Failure - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211010 21:08:31.151" level="INFO">Page title is 'Login Failure - Demo App'.</msg>
+<status status="PASS" starttime="20211010 21:08:31.144" endtime="20211010 21:08:31.151"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>You provided incorrect login details</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211010 21:08:31.182" level="INFO">Current page contains text 'You provided incorrect login details'.</msg>
+<status status="PASS" starttime="20211010 21:08:31.151" endtime="20211010 21:08:31.182"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:31.128" endtime="20211010 21:08:31.182"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:31.128" endtime="20211010 21:08:31.182"/>
+</branch>
+<branch type="ELSE">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" starttime="20211010 21:08:31.182" endtime="20211010 21:08:31.182"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:31.182" endtime="20211010 21:08:31.182"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:31.128" endtime="20211010 21:08:31.182"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:28.732" endtime="20211010 21:08:31.182"/>
+</kw>
+<tag>invalid-login</tag>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20211010 21:08:28.535" endtime="20211010 21:08:31.182"/>
+</test>
+<test id="s1-s4-t2" name="Right Username Empty Password">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:31.182" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:31.182" endtime="20211010 21:08:31.297"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:31.182" endtime="20211010 21:08:31.297"/>
+</kw>
+<kw name="Invalid Login">
+<arg>user1</arg>
+<arg>${EMPTY}</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:31.301" level="INFO">Typing text 'user1' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:31.300" endtime="20211010 21:08:31.409"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:31.300" endtime="20211010 21:08:31.409"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:31.409" level="INFO">Typing text '' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:31.409" endtime="20211010 21:08:31.488"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:31.409" endtime="20211010 21:08:31.488"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:31.489" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:31.489" endtime="20211010 21:08:31.559"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:31.488" endtime="20211010 21:08:31.559"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:33.575" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211010 21:08:31.560" endtime="20211010 21:08:33.575"/>
+</kw>
+<if>
+<branch type="IF" condition="(&quot;${username}&quot; != &quot;${EMPTY}&quot;) and (&quot;${password}&quot; != &quot;${EMPTY}&quot;)">
+<kw name="Error Page Should Be Visible" library="login_resources">
+<status status="NOT RUN" starttime="20211010 21:08:33.579" endtime="20211010 21:08:33.579"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:33.578" endtime="20211010 21:08:33.579"/>
+</branch>
+<branch type="ELSE">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:33.588" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:33.579" endtime="20211010 21:08:33.588"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:33.579" endtime="20211010 21:08:33.588"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:33.575" endtime="20211010 21:08:33.588"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:31.298" endtime="20211010 21:08:33.589"/>
+</kw>
+<tag>invalid-login</tag>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20211010 21:08:31.182" endtime="20211010 21:08:33.589"/>
+</test>
+<test id="s1-s4-t3" name="Wrong Username Right Password">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:33.594" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:33.593" endtime="20211010 21:08:33.717"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:33.592" endtime="20211010 21:08:33.718"/>
+</kw>
+<kw name="Invalid Login">
+<arg>luser1</arg>
+<arg>123456789</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:33.721" level="INFO">Typing text 'luser1' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:33.720" endtime="20211010 21:08:33.847"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:33.719" endtime="20211010 21:08:33.847"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:33.848" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:33.848" endtime="20211010 21:08:33.963"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:33.847" endtime="20211010 21:08:33.963"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:33.965" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:33.964" endtime="20211010 21:08:34.063"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:33.964" endtime="20211010 21:08:34.063"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:36.070" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211010 21:08:34.063" endtime="20211010 21:08:36.070"/>
+</kw>
+<if>
+<branch type="IF" condition="(&quot;${username}&quot; != &quot;${EMPTY}&quot;) and (&quot;${password}&quot; != &quot;${EMPTY}&quot;)">
+<kw name="Error Page Should Be Visible" library="login_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:36.070" level="INFO">Current location is 'http://127.0.0.1:5000/error'.</msg>
+<status status="PASS" starttime="20211010 21:08:36.070" endtime="20211010 21:08:36.070"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Login Failure - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211010 21:08:36.070" level="INFO">Page title is 'Login Failure - Demo App'.</msg>
+<status status="PASS" starttime="20211010 21:08:36.070" endtime="20211010 21:08:36.070"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>You provided incorrect login details</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211010 21:08:36.086" level="INFO">Current page contains text 'You provided incorrect login details'.</msg>
+<status status="PASS" starttime="20211010 21:08:36.070" endtime="20211010 21:08:36.086"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:36.070" endtime="20211010 21:08:36.086"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:36.070" endtime="20211010 21:08:36.086"/>
+</branch>
+<branch type="ELSE">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" starttime="20211010 21:08:36.086" endtime="20211010 21:08:36.086"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:36.086" endtime="20211010 21:08:36.086"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:36.070" endtime="20211010 21:08:36.086"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:33.719" endtime="20211010 21:08:36.086"/>
+</kw>
+<tag>invalid-login</tag>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20211010 21:08:33.591" endtime="20211010 21:08:36.086"/>
+</test>
+<test id="s1-s4-t4" name="Wrong Username Wrong Password">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:36.101" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:36.101" endtime="20211010 21:08:36.190"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:36.101" endtime="20211010 21:08:36.190"/>
+</kw>
+<kw name="Invalid Login">
+<arg>luser1</arg>
+<arg>xyz</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:36.192" level="INFO">Typing text 'luser1' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:36.192" endtime="20211010 21:08:36.314"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:36.191" endtime="20211010 21:08:36.314"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:36.316" level="INFO">Typing text 'xyz' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:36.315" endtime="20211010 21:08:36.394"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:36.314" endtime="20211010 21:08:36.394"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:36.394" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:36.394" endtime="20211010 21:08:36.495"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:36.394" endtime="20211010 21:08:36.495"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:38.508" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211010 21:08:36.496" endtime="20211010 21:08:38.508"/>
+</kw>
+<if>
+<branch type="IF" condition="(&quot;${username}&quot; != &quot;${EMPTY}&quot;) and (&quot;${password}&quot; != &quot;${EMPTY}&quot;)">
+<kw name="Error Page Should Be Visible" library="login_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:38.508" level="INFO">Current location is 'http://127.0.0.1:5000/error'.</msg>
+<status status="PASS" starttime="20211010 21:08:38.508" endtime="20211010 21:08:38.508"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Login Failure - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211010 21:08:38.508" level="INFO">Page title is 'Login Failure - Demo App'.</msg>
+<status status="PASS" starttime="20211010 21:08:38.508" endtime="20211010 21:08:38.508"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>You provided incorrect login details</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211010 21:08:38.524" level="INFO">Current page contains text 'You provided incorrect login details'.</msg>
+<status status="PASS" starttime="20211010 21:08:38.508" endtime="20211010 21:08:38.524"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:38.508" endtime="20211010 21:08:38.524"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:38.508" endtime="20211010 21:08:38.524"/>
+</branch>
+<branch type="ELSE">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" starttime="20211010 21:08:38.524" endtime="20211010 21:08:38.524"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:38.524" endtime="20211010 21:08:38.524"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:38.508" endtime="20211010 21:08:38.524"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:36.191" endtime="20211010 21:08:38.524"/>
+</kw>
+<tag>invalid-login</tag>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20211010 21:08:36.086" endtime="20211010 21:08:38.524"/>
+</test>
+<test id="s1-s4-t5" name="Wrong Username Empty Password">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:38.539" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:38.524" endtime="20211010 21:08:38.630"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:38.524" endtime="20211010 21:08:38.631"/>
+</kw>
+<kw name="Invalid Login">
+<arg>luser1</arg>
+<arg>${EMPTY}</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:38.634" level="INFO">Typing text 'luser1' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:38.634" endtime="20211010 21:08:38.759"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:38.633" endtime="20211010 21:08:38.759"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:38.760" level="INFO">Typing text '' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:38.760" endtime="20211010 21:08:38.852"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:38.759" endtime="20211010 21:08:38.853"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:38.854" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:38.854" endtime="20211010 21:08:38.923"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:38.853" endtime="20211010 21:08:38.923"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:40.935" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211010 21:08:38.924" endtime="20211010 21:08:40.935"/>
+</kw>
+<if>
+<branch type="IF" condition="(&quot;${username}&quot; != &quot;${EMPTY}&quot;) and (&quot;${password}&quot; != &quot;${EMPTY}&quot;)">
+<kw name="Error Page Should Be Visible" library="login_resources">
+<status status="NOT RUN" starttime="20211010 21:08:40.946" endtime="20211010 21:08:40.946"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:40.946" endtime="20211010 21:08:40.947"/>
+</branch>
+<branch type="ELSE">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:40.960" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:40.947" endtime="20211010 21:08:40.961"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:40.947" endtime="20211010 21:08:40.961"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:40.936" endtime="20211010 21:08:40.961"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:38.631" endtime="20211010 21:08:40.962"/>
+</kw>
+<tag>invalid-login</tag>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20211010 21:08:38.524" endtime="20211010 21:08:40.965"/>
+</test>
+<test id="s1-s4-t6" name="Empty Username Right Password">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:40.974" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:40.974" endtime="20211010 21:08:41.103"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:40.972" endtime="20211010 21:08:41.103"/>
+</kw>
+<kw name="Invalid Login">
+<arg>${EMPTY}</arg>
+<arg>123456789</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:41.107" level="INFO">Typing text '' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:41.107" endtime="20211010 21:08:41.206"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:41.106" endtime="20211010 21:08:41.206"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:41.209" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:41.208" endtime="20211010 21:08:41.307"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:41.207" endtime="20211010 21:08:41.308"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:41.309" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:41.308" endtime="20211010 21:08:41.378"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:41.308" endtime="20211010 21:08:41.379"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:43.384" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211010 21:08:41.379" endtime="20211010 21:08:43.384"/>
+</kw>
+<if>
+<branch type="IF" condition="(&quot;${username}&quot; != &quot;${EMPTY}&quot;) and (&quot;${password}&quot; != &quot;${EMPTY}&quot;)">
+<kw name="Error Page Should Be Visible" library="login_resources">
+<status status="NOT RUN" starttime="20211010 21:08:43.386" endtime="20211010 21:08:43.386"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:43.386" endtime="20211010 21:08:43.386"/>
+</branch>
+<branch type="ELSE">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:43.393" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:43.386" endtime="20211010 21:08:43.393"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:43.386" endtime="20211010 21:08:43.394"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:43.384" endtime="20211010 21:08:43.394"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:41.104" endtime="20211010 21:08:43.394"/>
+</kw>
+<tag>invalid-login</tag>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20211010 21:08:40.970" endtime="20211010 21:08:43.395"/>
+</test>
+<test id="s1-s4-t7" name="Empty Username Wrong Password">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:43.401" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:43.400" endtime="20211010 21:08:43.491"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:43.400" endtime="20211010 21:08:43.491"/>
+</kw>
+<kw name="Invalid Login">
+<arg>${EMPTY}</arg>
+<arg>xyz</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:43.497" level="INFO">Typing text '' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:43.496" endtime="20211010 21:08:43.595"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:43.495" endtime="20211010 21:08:43.595"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:43.596" level="INFO">Typing text 'xyz' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:43.596" endtime="20211010 21:08:43.683"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:43.595" endtime="20211010 21:08:43.683"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:43.684" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:43.684" endtime="20211010 21:08:43.740"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:43.683" endtime="20211010 21:08:43.740"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:45.754" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211010 21:08:43.740" endtime="20211010 21:08:45.754"/>
+</kw>
+<if>
+<branch type="IF" condition="(&quot;${username}&quot; != &quot;${EMPTY}&quot;) and (&quot;${password}&quot; != &quot;${EMPTY}&quot;)">
+<kw name="Error Page Should Be Visible" library="login_resources">
+<status status="NOT RUN" starttime="20211010 21:08:45.757" endtime="20211010 21:08:45.757"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:45.756" endtime="20211010 21:08:45.757"/>
+</branch>
+<branch type="ELSE">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:45.763" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:45.757" endtime="20211010 21:08:45.763"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:45.757" endtime="20211010 21:08:45.763"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:45.754" endtime="20211010 21:08:45.763"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:43.492" endtime="20211010 21:08:45.764"/>
+</kw>
+<tag>invalid-login</tag>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20211010 21:08:43.399" endtime="20211010 21:08:45.765"/>
+</test>
+<test id="s1-s4-t8" name="Empty Username Empty Password">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:45.770" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:45.769" endtime="20211010 21:08:45.858"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:45.768" endtime="20211010 21:08:45.859"/>
+</kw>
+<kw name="Invalid Login">
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:45.862" level="INFO">Typing text '' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:45.861" endtime="20211010 21:08:45.948"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:45.861" endtime="20211010 21:08:45.948"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:45.950" level="INFO">Typing text '' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:45.949" endtime="20211010 21:08:46.025"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:45.948" endtime="20211010 21:08:46.026"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:46.027" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:46.026" endtime="20211010 21:08:46.077"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:46.026" endtime="20211010 21:08:46.078"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:48.091" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211010 21:08:46.078" endtime="20211010 21:08:48.091"/>
+</kw>
+<if>
+<branch type="IF" condition="(&quot;${username}&quot; != &quot;${EMPTY}&quot;) and (&quot;${password}&quot; != &quot;${EMPTY}&quot;)">
+<kw name="Error Page Should Be Visible" library="login_resources">
+<status status="NOT RUN" starttime="20211010 21:08:48.095" endtime="20211010 21:08:48.096"/>
+</kw>
+<status status="NOT RUN" starttime="20211010 21:08:48.095" endtime="20211010 21:08:48.096"/>
+</branch>
+<branch type="ELSE">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:48.107" level="INFO">Current location is 'http://127.0.0.1:5000/login'.</msg>
+<status status="PASS" starttime="20211010 21:08:48.096" endtime="20211010 21:08:48.108"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:48.096" endtime="20211010 21:08:48.108"/>
+</branch>
+<status status="PASS" starttime="20211010 21:08:48.092" endtime="20211010 21:08:48.109"/>
+</if>
+<status status="PASS" starttime="20211010 21:08:45.859" endtime="20211010 21:08:48.109"/>
+</kw>
+<tag>invalid-login</tag>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20211010 21:08:45.767" endtime="20211010 21:08:48.110"/>
+</test>
+<kw name="Close Browsers" library="common_resources" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211010 21:08:48.116" endtime="20211010 21:08:50.351"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:48.116" endtime="20211010 21:08:50.351"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:25.510" endtime="20211010 21:08:50.351"/>
+</suite>
+<suite id="s1-s5" name="ValidLoginTests" source="C:\Users\buidu\PycharmProjects\SH-Flasky-interview\Tests\05__ValidLoginTests.robot">
+<kw name="Open My Browser" library="common_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211010 21:08:50.413" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<status status="PASS" starttime="20211010 21:08:50.413" endtime="20211010 21:08:52.218"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211010 21:08:52.218" endtime="20211010 21:08:52.354"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211010 21:08:53.360" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211010 21:08:52.354" endtime="20211010 21:08:53.360"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:50.413" endtime="20211010 21:08:53.360"/>
+</kw>
+<test id="s1-s5-t1" name="Users should login successfully with Valid Credentials">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:53.360" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:53.360" endtime="20211010 21:08:53.562"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:53.360" endtime="20211010 21:08:53.563"/>
+</kw>
+<kw name="Valid Login">
+<arg>user1</arg>
+<arg>123456789</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:53.569" level="INFO">Typing text 'user1' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:53.568" endtime="20211010 21:08:53.714"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:53.567" endtime="20211010 21:08:53.714"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:53.714" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:53.714" endtime="20211010 21:08:53.833"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:53.714" endtime="20211010 21:08:53.834"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:53.835" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:53.834" endtime="20211010 21:08:53.975"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:53.834" endtime="20211010 21:08:53.976"/>
+</kw>
+<kw name="User Page Should Be Visible" library="login_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${USER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:53.986" level="INFO">Current location is 'http://127.0.0.1:5000/user'.</msg>
+<status status="PASS" starttime="20211010 21:08:53.977" endtime="20211010 21:08:53.986"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>User Information</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211010 21:08:54.005" level="INFO">Current page contains text 'User Information'.</msg>
+<status status="PASS" starttime="20211010 21:08:53.986" endtime="20211010 21:08:54.005"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:53.976" endtime="20211010 21:08:54.005"/>
+</kw>
+<kw name="Click Log Out Link" library="login_resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:54.006" level="INFO">Clicking link 'Log Out'.</msg>
+<status status="PASS" starttime="20211010 21:08:54.006" endtime="20211010 21:08:54.098"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:54.005" endtime="20211010 21:08:54.098"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:53.566" endtime="20211010 21:08:54.099"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-login</tag>
+<status status="PASS" starttime="20211010 21:08:53.360" endtime="20211010 21:08:54.099"/>
+</test>
+<test id="s1-s5-t2" name="Users should login successfully with Valid Credentials">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:54.108" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:54.108" endtime="20211010 21:08:54.202"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:54.108" endtime="20211010 21:08:54.203"/>
+</kw>
+<kw name="Valid Login">
+<arg>user2</arg>
+<arg>123456789</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:54.209" level="INFO">Typing text 'user2' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:54.208" endtime="20211010 21:08:54.308"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:54.206" endtime="20211010 21:08:54.308"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:54.310" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:54.309" endtime="20211010 21:08:54.401"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:54.308" endtime="20211010 21:08:54.401"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:54.402" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:54.402" endtime="20211010 21:08:54.547"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:54.401" endtime="20211010 21:08:54.548"/>
+</kw>
+<kw name="User Page Should Be Visible" library="login_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${USER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:54.557" level="INFO">Current location is 'http://127.0.0.1:5000/user'.</msg>
+<status status="PASS" starttime="20211010 21:08:54.550" endtime="20211010 21:08:54.557"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>User Information</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211010 21:08:54.572" level="INFO">Current page contains text 'User Information'.</msg>
+<status status="PASS" starttime="20211010 21:08:54.557" endtime="20211010 21:08:54.572"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:54.549" endtime="20211010 21:08:54.572"/>
+</kw>
+<kw name="Click Log Out Link" library="login_resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:54.573" level="INFO">Clicking link 'Log Out'.</msg>
+<status status="PASS" starttime="20211010 21:08:54.573" endtime="20211010 21:08:54.677"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:54.572" endtime="20211010 21:08:54.677"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:54.204" endtime="20211010 21:08:54.677"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-login</tag>
+<status status="PASS" starttime="20211010 21:08:54.103" endtime="20211010 21:08:54.678"/>
+</test>
+<test id="s1-s5-t3" name="Users should login successfully with Valid Credentials">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:54.689" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:54.687" endtime="20211010 21:08:54.798"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:54.685" endtime="20211010 21:08:54.799"/>
+</kw>
+<kw name="Valid Login">
+<arg>user3</arg>
+<arg>123456789</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:54.802" level="INFO">Typing text 'user3' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:54.802" endtime="20211010 21:08:54.902"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:54.800" endtime="20211010 21:08:54.902"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:54.904" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:54.903" endtime="20211010 21:08:54.988"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:54.902" endtime="20211010 21:08:54.988"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:54.988" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:54.988" endtime="20211010 21:08:55.117"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:54.988" endtime="20211010 21:08:55.117"/>
+</kw>
+<kw name="User Page Should Be Visible" library="login_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${USER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:55.124" level="INFO">Current location is 'http://127.0.0.1:5000/user'.</msg>
+<status status="PASS" starttime="20211010 21:08:55.118" endtime="20211010 21:08:55.124"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>User Information</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211010 21:08:55.137" level="INFO">Current page contains text 'User Information'.</msg>
+<status status="PASS" starttime="20211010 21:08:55.124" endtime="20211010 21:08:55.137"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:55.117" endtime="20211010 21:08:55.137"/>
+</kw>
+<kw name="Click Log Out Link" library="login_resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:55.138" level="INFO">Clicking link 'Log Out'.</msg>
+<status status="PASS" starttime="20211010 21:08:55.138" endtime="20211010 21:08:55.219"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:55.138" endtime="20211010 21:08:55.219"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:54.799" endtime="20211010 21:08:55.219"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-login</tag>
+<status status="PASS" starttime="20211010 21:08:54.681" endtime="20211010 21:08:55.220"/>
+</test>
+<test id="s1-s5-t4" name="Users should login successfully with Valid Credentials">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:55.231" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:55.231" endtime="20211010 21:08:55.327"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:55.229" endtime="20211010 21:08:55.328"/>
+</kw>
+<kw name="Valid Login">
+<arg>user4</arg>
+<arg>123456789</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:55.335" level="INFO">Typing text 'user4' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:55.333" endtime="20211010 21:08:55.428"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:55.331" endtime="20211010 21:08:55.428"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:55.429" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:55.429" endtime="20211010 21:08:55.531"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:55.428" endtime="20211010 21:08:55.531"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:55.532" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:55.532" endtime="20211010 21:08:55.662"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:55.531" endtime="20211010 21:08:55.662"/>
+</kw>
+<kw name="User Page Should Be Visible" library="login_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${USER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:55.669" level="INFO">Current location is 'http://127.0.0.1:5000/user'.</msg>
+<status status="PASS" starttime="20211010 21:08:55.663" endtime="20211010 21:08:55.670"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>User Information</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211010 21:08:55.683" level="INFO">Current page contains text 'User Information'.</msg>
+<status status="PASS" starttime="20211010 21:08:55.670" endtime="20211010 21:08:55.683"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:55.662" endtime="20211010 21:08:55.683"/>
+</kw>
+<kw name="Click Log Out Link" library="login_resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:55.684" level="INFO">Clicking link 'Log Out'.</msg>
+<status status="PASS" starttime="20211010 21:08:55.683" endtime="20211010 21:08:55.769"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:55.683" endtime="20211010 21:08:55.769"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:55.329" endtime="20211010 21:08:55.770"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-login</tag>
+<status status="PASS" starttime="20211010 21:08:55.225" endtime="20211010 21:08:55.771"/>
+</test>
+<test id="s1-s5-t5" name="Users should login successfully with Valid Credentials">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:55.776" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:55.776" endtime="20211010 21:08:55.877"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:55.776" endtime="20211010 21:08:55.877"/>
+</kw>
+<kw name="Valid Login">
+<arg>user5</arg>
+<arg>123456789</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:55.881" level="INFO">Typing text 'user5' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:55.880" endtime="20211010 21:08:55.975"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:55.879" endtime="20211010 21:08:55.975"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:55.977" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:55.976" endtime="20211010 21:08:56.064"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:55.975" endtime="20211010 21:08:56.064"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:56.065" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:56.064" endtime="20211010 21:08:56.189"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:56.064" endtime="20211010 21:08:56.189"/>
+</kw>
+<kw name="User Page Should Be Visible" library="login_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${USER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:56.194" level="INFO">Current location is 'http://127.0.0.1:5000/user'.</msg>
+<status status="PASS" starttime="20211010 21:08:56.190" endtime="20211010 21:08:56.194"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>User Information</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211010 21:08:56.207" level="INFO">Current page contains text 'User Information'.</msg>
+<status status="PASS" starttime="20211010 21:08:56.194" endtime="20211010 21:08:56.207"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:56.189" endtime="20211010 21:08:56.207"/>
+</kw>
+<kw name="Click Log Out Link" library="login_resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:56.209" level="INFO">Clicking link 'Log Out'.</msg>
+<status status="PASS" starttime="20211010 21:08:56.208" endtime="20211010 21:08:56.284"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:56.208" endtime="20211010 21:08:56.285"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:55.879" endtime="20211010 21:08:56.285"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-login</tag>
+<status status="PASS" starttime="20211010 21:08:55.774" endtime="20211010 21:08:56.285"/>
+</test>
+<test id="s1-s5-t6" name="Users should login successfully with Valid Credentials">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:56.292" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:56.292" endtime="20211010 21:08:56.372"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:56.290" endtime="20211010 21:08:56.373"/>
+</kw>
+<kw name="Valid Login">
+<arg>user6</arg>
+<arg>123456789</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:56.376" level="INFO">Typing text 'user6' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:56.376" endtime="20211010 21:08:56.471"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:56.375" endtime="20211010 21:08:56.471"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:56.473" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:56.472" endtime="20211010 21:08:56.563"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:56.471" endtime="20211010 21:08:56.563"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:56.564" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:56.564" endtime="20211010 21:08:56.713"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:56.563" endtime="20211010 21:08:56.713"/>
+</kw>
+<kw name="User Page Should Be Visible" library="login_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${USER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:56.720" level="INFO">Current location is 'http://127.0.0.1:5000/user'.</msg>
+<status status="PASS" starttime="20211010 21:08:56.715" endtime="20211010 21:08:56.720"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>User Information</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211010 21:08:56.734" level="INFO">Current page contains text 'User Information'.</msg>
+<status status="PASS" starttime="20211010 21:08:56.720" endtime="20211010 21:08:56.734"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:56.713" endtime="20211010 21:08:56.734"/>
+</kw>
+<kw name="Click Log Out Link" library="login_resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:56.735" level="INFO">Clicking link 'Log Out'.</msg>
+<status status="PASS" starttime="20211010 21:08:56.735" endtime="20211010 21:08:56.839"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:56.734" endtime="20211010 21:08:56.840"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:56.374" endtime="20211010 21:08:56.840"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-login</tag>
+<status status="PASS" starttime="20211010 21:08:56.287" endtime="20211010 21:08:56.841"/>
+</test>
+<test id="s1-s5-t7" name="Users should login successfully with Valid Credentials">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:56.849" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:56.848" endtime="20211010 21:08:56.932"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:56.848" endtime="20211010 21:08:56.933"/>
+</kw>
+<kw name="Valid Login">
+<arg>user7</arg>
+<arg>123456789</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:56.938" level="INFO">Typing text 'user7' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:56.936" endtime="20211010 21:08:57.040"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:56.934" endtime="20211010 21:08:57.040"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:57.042" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:57.041" endtime="20211010 21:08:57.127"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:57.041" endtime="20211010 21:08:57.128"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:57.128" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:57.128" endtime="20211010 21:08:57.252"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:57.128" endtime="20211010 21:08:57.253"/>
+</kw>
+<kw name="User Page Should Be Visible" library="login_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${USER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:57.259" level="INFO">Current location is 'http://127.0.0.1:5000/user'.</msg>
+<status status="PASS" starttime="20211010 21:08:57.253" endtime="20211010 21:08:57.259"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>User Information</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211010 21:08:57.278" level="INFO">Current page contains text 'User Information'.</msg>
+<status status="PASS" starttime="20211010 21:08:57.260" endtime="20211010 21:08:57.278"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:57.253" endtime="20211010 21:08:57.278"/>
+</kw>
+<kw name="Click Log Out Link" library="login_resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:57.279" level="INFO">Clicking link 'Log Out'.</msg>
+<status status="PASS" starttime="20211010 21:08:57.279" endtime="20211010 21:08:57.381"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:57.278" endtime="20211010 21:08:57.381"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:56.933" endtime="20211010 21:08:57.381"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-login</tag>
+<status status="PASS" starttime="20211010 21:08:56.846" endtime="20211010 21:08:57.382"/>
+</test>
+<test id="s1-s5-t8" name="Users should login successfully with Valid Credentials">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:57.388" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:57.388" endtime="20211010 21:08:57.479"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:57.387" endtime="20211010 21:08:57.480"/>
+</kw>
+<kw name="Valid Login">
+<arg>user8</arg>
+<arg>123456789</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:57.484" level="INFO">Typing text 'user8' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:57.484" endtime="20211010 21:08:57.588"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:57.482" endtime="20211010 21:08:57.588"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:57.590" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:57.589" endtime="20211010 21:08:57.675"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:57.589" endtime="20211010 21:08:57.676"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:57.677" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:57.676" endtime="20211010 21:08:57.808"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:57.676" endtime="20211010 21:08:57.809"/>
+</kw>
+<kw name="User Page Should Be Visible" library="login_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${USER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:57.814" level="INFO">Current location is 'http://127.0.0.1:5000/user'.</msg>
+<status status="PASS" starttime="20211010 21:08:57.810" endtime="20211010 21:08:57.814"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>User Information</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211010 21:08:57.827" level="INFO">Current page contains text 'User Information'.</msg>
+<status status="PASS" starttime="20211010 21:08:57.814" endtime="20211010 21:08:57.827"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:57.809" endtime="20211010 21:08:57.827"/>
+</kw>
+<kw name="Click Log Out Link" library="login_resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:57.828" level="INFO">Clicking link 'Log Out'.</msg>
+<status status="PASS" starttime="20211010 21:08:57.828" endtime="20211010 21:08:57.908"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:57.828" endtime="20211010 21:08:57.908"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:57.481" endtime="20211010 21:08:57.908"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-login</tag>
+<status status="PASS" starttime="20211010 21:08:57.385" endtime="20211010 21:08:57.909"/>
+</test>
+<test id="s1-s5-t9" name="Users should login successfully with Valid Credentials">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:57.914" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:57.913" endtime="20211010 21:08:57.993"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:57.913" endtime="20211010 21:08:57.994"/>
+</kw>
+<kw name="Valid Login">
+<arg>user9</arg>
+<arg>123456789</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:57.999" level="INFO">Typing text 'user9' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:57.997" endtime="20211010 21:08:58.112"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:57.996" endtime="20211010 21:08:58.112"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:58.113" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:58.113" endtime="20211010 21:08:58.206"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:58.113" endtime="20211010 21:08:58.206"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:58.208" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:58.207" endtime="20211010 21:08:58.357"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:58.207" endtime="20211010 21:08:58.357"/>
+</kw>
+<kw name="User Page Should Be Visible" library="login_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${USER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:58.364" level="INFO">Current location is 'http://127.0.0.1:5000/user'.</msg>
+<status status="PASS" starttime="20211010 21:08:58.358" endtime="20211010 21:08:58.365"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>User Information</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211010 21:08:58.380" level="INFO">Current page contains text 'User Information'.</msg>
+<status status="PASS" starttime="20211010 21:08:58.365" endtime="20211010 21:08:58.380"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:58.358" endtime="20211010 21:08:58.380"/>
+</kw>
+<kw name="Click Log Out Link" library="login_resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:58.381" level="INFO">Clicking link 'Log Out'.</msg>
+<status status="PASS" starttime="20211010 21:08:58.381" endtime="20211010 21:08:58.460"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:58.380" endtime="20211010 21:08:58.460"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:57.995" endtime="20211010 21:08:58.460"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-login</tag>
+<status status="PASS" starttime="20211010 21:08:57.911" endtime="20211010 21:08:58.461"/>
+</test>
+<test id="s1-s5-t10" name="Users should login successfully with Valid Credentials">
+<kw name="Open Login Page" library="login_resources" type="SETUP">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log In')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:58.465" level="INFO">Clicking link 'xpath://a[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20211010 21:08:58.465" endtime="20211010 21:08:58.566"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:58.465" endtime="20211010 21:08:58.567"/>
+</kw>
+<kw name="Valid Login">
+<arg>user10</arg>
+<arg>123456789</arg>
+<kw name="Input Username" library="common_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:58.570" level="INFO">Typing text 'user10' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20211010 21:08:58.569" endtime="20211010 21:08:58.671"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:58.569" endtime="20211010 21:08:58.671"/>
+</kw>
+<kw name="Input Password" library="common_resources">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:58.672" level="INFO">Typing text '123456789' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20211010 21:08:58.672" endtime="20211010 21:08:58.772"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:58.671" endtime="20211010 21:08:58.772"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/section[1]/form[1]/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:58.774" level="INFO">Clicking element 'xpath://body/section[1]/form[1]/input[3]'.</msg>
+<status status="PASS" starttime="20211010 21:08:58.774" endtime="20211010 21:08:58.913"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:58.773" endtime="20211010 21:08:58.914"/>
+</kw>
+<kw name="User Page Should Be Visible" library="login_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${USER URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20211010 21:08:58.923" level="INFO">Current location is 'http://127.0.0.1:5000/user'.</msg>
+<status status="PASS" starttime="20211010 21:08:58.916" endtime="20211010 21:08:58.923"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>User Information</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211010 21:08:58.934" level="INFO">Current page contains text 'User Information'.</msg>
+<status status="PASS" starttime="20211010 21:08:58.924" endtime="20211010 21:08:58.934"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:58.915" endtime="20211010 21:08:58.934"/>
+</kw>
+<kw name="Click Log Out Link" library="login_resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211010 21:08:58.935" level="INFO">Clicking link 'Log Out'.</msg>
+<status status="PASS" starttime="20211010 21:08:58.934" endtime="20211010 21:08:59.015"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:58.934" endtime="20211010 21:08:59.015"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:58.568" endtime="20211010 21:08:59.015"/>
+</kw>
+<tag>owner-thanh</tag>
+<tag>smoke</tag>
+<tag>valid-login</tag>
+<status status="PASS" starttime="20211010 21:08:58.463" endtime="20211010 21:08:59.016"/>
+</test>
+<kw name="Close Browsers" library="common_resources" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211010 21:08:59.022" endtime="20211010 21:09:01.214"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:59.020" endtime="20211010 21:09:01.214"/>
+</kw>
+<status status="PASS" starttime="20211010 21:08:50.366" endtime="20211010 21:09:01.214"/>
+</suite>
+<status status="PASS" starttime="20211010 21:07:41.900" endtime="20211010 21:09:01.232"/>
+</suite>
+<statistics>
+<total>
+<stat pass="34" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">front-page</stat>
+<stat pass="8" fail="0" skip="0">invalid-login</stat>
+<stat pass="5" fail="0" skip="0">invalid-register</stat>
+<stat pass="1" fail="0" skip="0">login-page</stat>
+<stat pass="33" fail="0" skip="0">owner-thanh</stat>
+<stat pass="33" fail="0" skip="0">smoke</stat>
+<stat pass="1" fail="0" skip="0">ui-test</stat>
+<stat pass="10" fail="0" skip="0">valid-login</stat>
+<stat pass="10" fail="0" skip="0">valid-register</stat>
+</tag>
+<suite>
+<stat pass="34" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="HomePage">Tests.HomePage</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s2" name="InvalidRegisterTests">Tests.InvalidRegisterTests</stat>
+<stat pass="10" fail="0" skip="0" id="s1-s3" name="ValidRegisterTests">Tests.ValidRegisterTests</stat>
+<stat pass="8" fail="0" skip="0" id="s1-s4" name="InvalidLoginTests">Tests.InvalidLoginTests</stat>
+<stat pass="10" fail="0" skip="0" id="s1-s5" name="ValidLoginTests">Tests.ValidLoginTests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211010 21:08:06.746" level="WARN">Multiple test cases with name 'Users Registration should be successful with valid credentials' executed in test suite 'Tests.ValidRegisterTests'.</msg>
+<msg timestamp="20211010 21:08:08.558" level="WARN">Multiple test cases with name 'Users Registration should be successful with valid credentials' executed in test suite 'Tests.ValidRegisterTests'.</msg>
+<msg timestamp="20211010 21:08:10.423" level="WARN">Multiple test cases with name 'Users Registration should be successful with valid credentials' executed in test suite 'Tests.ValidRegisterTests'.</msg>
+<msg timestamp="20211010 21:08:12.241" level="WARN">Multiple test cases with name 'Users Registration should be successful with valid credentials' executed in test suite 'Tests.ValidRegisterTests'.</msg>
+<msg timestamp="20211010 21:08:14.094" level="WARN">Multiple test cases with name 'Users Registration should be successful with valid credentials' executed in test suite 'Tests.ValidRegisterTests'.</msg>
+<msg timestamp="20211010 21:08:15.971" level="WARN">Multiple test cases with name 'Users Registration should be successful with valid credentials' executed in test suite 'Tests.ValidRegisterTests'.</msg>
+<msg timestamp="20211010 21:08:17.825" level="WARN">Multiple test cases with name 'Users Registration should be successful with valid credentials' executed in test suite 'Tests.ValidRegisterTests'.</msg>
+<msg timestamp="20211010 21:08:19.615" level="WARN">Multiple test cases with name 'Users Registration should be successful with valid credentials' executed in test suite 'Tests.ValidRegisterTests'.</msg>
+<msg timestamp="20211010 21:08:21.421" level="WARN">Multiple test cases with name 'Users Registration should be successful with valid credentials' executed in test suite 'Tests.ValidRegisterTests'.</msg>
+<msg timestamp="20211010 21:08:54.102" level="WARN">Multiple test cases with name 'Users should login successfully with Valid Credentials' executed in test suite 'Tests.ValidLoginTests'.</msg>
+<msg timestamp="20211010 21:08:54.681" level="WARN">Multiple test cases with name 'Users should login successfully with Valid Credentials' executed in test suite 'Tests.ValidLoginTests'.</msg>
+<msg timestamp="20211010 21:08:55.222" level="WARN">Multiple test cases with name 'Users should login successfully with Valid Credentials' executed in test suite 'Tests.ValidLoginTests'.</msg>
+<msg timestamp="20211010 21:08:55.773" level="WARN">Multiple test cases with name 'Users should login successfully with Valid Credentials' executed in test suite 'Tests.ValidLoginTests'.</msg>
+<msg timestamp="20211010 21:08:56.287" level="WARN">Multiple test cases with name 'Users should login successfully with Valid Credentials' executed in test suite 'Tests.ValidLoginTests'.</msg>
+<msg timestamp="20211010 21:08:56.844" level="WARN">Multiple test cases with name 'Users should login successfully with Valid Credentials' executed in test suite 'Tests.ValidLoginTests'.</msg>
+<msg timestamp="20211010 21:08:57.385" level="WARN">Multiple test cases with name 'Users should login successfully with Valid Credentials' executed in test suite 'Tests.ValidLoginTests'.</msg>
+<msg timestamp="20211010 21:08:57.910" level="WARN">Multiple test cases with name 'Users should login successfully with Valid Credentials' executed in test suite 'Tests.ValidLoginTests'.</msg>
+<msg timestamp="20211010 21:08:58.462" level="WARN">Multiple test cases with name 'Users should login successfully with Valid Credentials' executed in test suite 'Tests.ValidLoginTests'.</msg>
+</errors>
+</robot>
